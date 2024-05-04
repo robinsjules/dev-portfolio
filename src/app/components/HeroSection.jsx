@@ -8,14 +8,24 @@ import LinkedInIcon from "../../../public/linkedin-icon.svg"
 
 const HeroSection = () => {
   return (
-    <section>
-        <div className="grid grid-cols-1 lg:grid-cols-12">
-            <div className="col-span-7 place-self-center text-center sm:text-left">
-                <h1 className="text-[#FFFFF3] mb-4 text-4xl sm:text-5xl lg:text-5xl font-extrabold">
+    <section className="lg:py-16 place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-12">
+        <div className="col-span-6 place-self-center mb-4 mt-4 lg:mt-0">
+                <div className="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] relative">
+                    <Image
+                        src="/images/Jules-Photo.png"
+                        alt="Jules Hero Image"
+                        width={300}
+                        height={300}
+                    />
+                </div>
+            </div>
+            <div className="col-span-6 text-center sm:text-left">
+                <h1 className="text-[#FFFFF3] mb-4 text-4xl sm:text-5xl lg:text-8xl font-extrabold">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF4365] to-[#B6DC76]">
                         Hello, I'm {" "}
                         </span>
-                        <br></br>
+                        <br/>
                         <TypeAnimation
                             sequence={[
                                 "Jules",
@@ -32,10 +42,10 @@ const HeroSection = () => {
                             repeat={Infinity}
                             />
                 </h1>
-                <p className="text-[#B7AD99] text-base sm:text-lg mb-6 lg:text-xl">
-                    I'm an aspiring full stack developer!
+                <p className="text-[#B7AD99] lg:text-2xl mb-6">
+                    and an aspiring full stack developer.
                 </p>
-                <div className="flex items-center justify-center lg:justify-start gap-2">
+                <div className="flex items-center justify-center sm:justify-start gap-2">
                     <button className="bg-[#FF4365] hover:bg-slate-200 text-black py-2 px-4 rounded-full">
                         Email Me
                     </button>
@@ -47,16 +57,6 @@ const HeroSection = () => {
                             <Image src={LinkedInIcon} alt="LinkedIn Icon" />
                         </Link>
                     </div>
-                </div>
-            </div>
-            <div className="col-span-5 place-self-center mt-4 lg:mt-0">
-                <div className="w-[250px] h-[250px] lg:w-[300px] lg:h-[300px]">
-                    <Image
-                        src="/images/Jules-Photo.png"
-                        alt="Jules Hero Image"
-                        width={500}
-                        height={500}
-                    />
                 </div>
             </div>
         </div>
