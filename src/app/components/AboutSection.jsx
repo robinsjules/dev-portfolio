@@ -1,29 +1,26 @@
-import React from 'react'
+import React from "react";
 
 const AboutSection = () => {
   return (
-    <section className="text-[#FFFFFC]">
-        <div className="items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-            <div>
-                <h2 className="text-4xl font-bold mb-4">
-                    About Me
-                </h2>
-                <p className="text-[#B7AD99] text-base lg:text-lg">
-                    Deeply passionate about technology and its power to transform lives, I strive
-                    to create, innovate, and improve products and services for the contemporary world. I am an incoming intern at InterSystems,
-                    where I will apply my software engineering and communication skills to develop solutions for other companies.
-               <br />
-               <br />
-                    Beyond the tech space, I am a foodie and avid traveler. Exploring the unknown has always felt natural to me, and I am always
-                    up for a new adventure and good challenge.
-                <br />
-                <br />
-                    Let's go on this journey of embracing uncertainty and creating a better world together!
-               </p>
-            </div>
-        </div>
+    <section className="items-center py-4 px-4 xl:px-16">
+          <h1 className="text-[#FF4365] uppercase lg:text-4xl text-2xl font-bold mb-4">About Me</h1>
+          <p className="text-[#FFFFFC] text-base lg:text-lg">
+            Deeply passionate about technology and its power to transform lives,
+            I strive to create, innovate, and improve products and services for
+            the contemporary world. During my recent internship at InterSystems
+            Asia Pacific as a Software Engineer Intern, I developed REST APIs,
+            SQL triggers, and an AI chatbot for an IT Solutions and Consulting
+            firm to aid in migrating their current technology stack to the IRIS
+            data platform.
+            <br />
+            <br />
+            Beyond the tech space, I am a foodie and avid traveler. Exploring
+            the unknown has always felt natural to me, and I am always up for a
+            new adventure and good challenge. Let's go on this journey of
+            embracing uncertainty and creating a better world together!
+          </p>
     </section>
-  )
-}
+  );
+};
 
-export default AboutSection
+export default AboutSection;

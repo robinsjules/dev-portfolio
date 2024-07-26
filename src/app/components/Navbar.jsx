@@ -1,9 +1,11 @@
 "use client"
 import React, { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import NavLink from "./NavLink"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 import MenuOverlay from './MenuOverlay'
+import AppLogo from "../../../public/app-logo.svg"
 
 const navLinks = [
     {
@@ -11,12 +13,16 @@ const navLinks = [
         path: "#about",
     },
     {
+        title: "Projects",
+        path: "#projects",
+    },
+    {
         title: "Experience",
         path: "#experience",
     },
     {
-        title: "Projects",
-        path: "#projects",
+        title: "Technologies",
+        path: "#technologies",
     },
     {
         title: "Certifications",
@@ -32,14 +38,14 @@ const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false)
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-10 bg-[#FF4365] bg-opacity-90">
-            <div className="flex flex-wrap items-center justify-between mx-auto px-4 py-2">
-                <Link
-                    href={"/"}
-                    className="text-2xl md:text-5xl text-[#FFFFF3] font-semibold"
-                >
-                    Logo
-                </Link>
+        <nav className="fixed top-0 left-0 right-0 z-10 py-2 bg-[#051014] bg-opacity-90">
+            <div className="flex flex-wrap items-center justify-between mx-auto px-6 py-2 lg:px-10">
+            <Link href={"/"}>
+                <div className="flex items-center cursor-pointer">
+                    <Image src={AppLogo} alt="Logo" height={40} width={40} />
+                    <span className="ml-2 text-white hidden lg:inline">Jules Robins</span>
+                </div>
+            </Link>
                 <div className="block md:hidden">
                     {!navbarOpen ? (
                         <button

@@ -8,9 +8,9 @@ import LinkedInIcon from "../../../public/linkedin-icon.svg"
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16 place-items-center">
+    <section className="lg:py-8 py-4 place-items-center">
         <div className="grid grid-cols-1 sm:grid-cols-12">
-        <div className="col-span-6 place-self-center mb-4 mt-4 lg:mt-0">
+            <div className="col-span-6 place-self-center mb-4 mt-4 lg:mt-0">
                 <div className="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] relative">
                     <Image
                         src="/images/Jules-Photo.png"
@@ -42,11 +42,11 @@ const HeroSection = () => {
                             repeat={Infinity}
                             />
                 </h1>
-                <p className="text-[#B7AD99] lg:text-2xl mb-6">
+                <p className="text-[#FFFFFC] lg:text-2xl mb-6">
                     and an aspiring full stack developer.
                 </p>
                 <div className="flex items-center justify-center sm:justify-start gap-2">
-                    <button className="bg-[#FF4365] hover:bg-slate-200 text-black py-2 px-4 rounded-full">
+                    <button className="bg-[#FF4365] hover:bg-slate-200 text-[#051014] py-2 px-4 rounded-full">
                         Email Me
                     </button>
                     <div className="flex">
