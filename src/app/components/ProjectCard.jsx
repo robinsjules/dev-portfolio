@@ -3,10 +3,10 @@ import Link from "next/link"
 import { CodeBracketIcon } from "@heroicons/react/24/outline"
 
 const ProjectCard = ({ imgUrl, title, description, languages, gitUrl }) => {
-  const colors = ["#FF4365", "#FFA900", "#00C2FF", "#A6FF00", "#FFFF00", "#CF9FFF"]; // Define your color palette
+  const colors = ["#FF4365", "#FFA900", "#00C2FF", "#A6FF00", "#FFFF00", "#CF9FFF"]
 
   return (
-    <div className="flex flex-col justify-between h-full">  {/* Ensure full height and stretch */}
+    <div className="flex flex-col justify-between h-full"> 
       <div
         className="h-52 md:h-40 lg:h-72 rounded-t-xl relative group"
         style={{ background: `url(${imgUrl})`, backgroundSize: "100%", backgroundRepeat: "no-repeat" }}
@@ -28,8 +28,8 @@ const ProjectCard = ({ imgUrl, title, description, languages, gitUrl }) => {
           {languages.map((language, index) => (
             <span
               key={index}
-              style={{ color: colors[index % colors.length] }} // Cycle through colors
-              className="mr-2 mb-1" // Add some space between languages and handle wrapping
+              style={{ color: colors[index % colors.length] }}
+              className="mr-2 mb-1"
             >
               {language.toUpperCase()}
             </span>

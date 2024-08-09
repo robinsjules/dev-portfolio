@@ -22,14 +22,6 @@ const projectsData = [
     },
     {
         id: 3,
-        title: "SMU Libraries GPT Chatbot",
-        description: "Based on SMU Libraries data scraped from their website, the chatbot answers queries and provides intelligent recommendations. It was built using OpenAI's GPT-3.5-Turbo.",
-        languages: ["Python", "Langchain", "OpenAI", "Streamlit"],
-        image: "/images/AIChatbot-Image.png",
-        gitUrl: "https://github.com/robinsjules/AI-Chatbot",
-    },
-    {
-        id: 4,
         title: "GIS Analysis of JC Mergers",
         description: "This QGIS project explores the equity of access after closures or mergers of Junior Colleges in Singapore. The website was rendered using Quarto in RStudio and is hosted on Netlify.",
         languages: ["QGIS", "RStudio", "Quarto", "JavaScript", "HTML", "Netlify"],
@@ -58,7 +50,7 @@ const ProjectsSection = () => {
                     initial="initial"
                     animate={isInView ? "animate" : "initial"}
                     transition={{ duration: 0.3, delay: index * 0.4 }}
-                    className="flex" // Ensure all cards stretch to the same height
+                    className="flex"
                 >
                     <ProjectCard
                     key={project.id}

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const AboutSection = () => {
   return (
@@ -20,7 +20,7 @@ const AboutSection = () => {
             embracing uncertainty and creating a better world together!
           </p>
     </section>
-  );
-};
+  )
+}
 
-export default AboutSection;
+export default AboutSection
