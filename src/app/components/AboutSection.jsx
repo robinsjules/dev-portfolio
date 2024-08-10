@@ -4,7 +4,7 @@ const AboutSection = () => {
   return (
     <section className="items-center px-4 xl:px-16 lg:pt-20 py-4" id="about">
           <h1 className="text-[#FF4365] uppercase lg:text-4xl text-2xl font-bold mb-4">About Me</h1>
-          <p className="text-[#FFFFFC] text-base lg:text-lg">
+          <p className="text-white text-base lg:text-lg">
             Deeply passionate about technology and its power to transform lives,
             I strive to create, innovate, and improve products and services for
             the contemporary world. During my recent internship at InterSystems

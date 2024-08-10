@@ -21,7 +21,7 @@ const HeroSection = () => {
                 </div>
             </div>
             <div className="col-span-6 text-center sm:text-left">
-                <h1 className="text-[#FFFFF3] mb-4 text-4xl sm:text-5xl lg:text-8xl font-extrabold">
+                <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl font-extrabold">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF4365] to-[#B6DC76]">
                         Hello, I'm {" "}
                         </span>
@@ -42,7 +42,7 @@ const HeroSection = () => {
                             repeat={Infinity}
                             />
                 </h1>
-                <p className="text-[#FFFFFC] lg:text-2xl mb-6">
+                <p className="text-white lg:text-2xl mb-6">
                     and an aspiring full stack developer.
                 </p>
                 <div className="flex items-center justify-center sm:justify-start gap-2">

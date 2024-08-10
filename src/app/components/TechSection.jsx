@@ -40,7 +40,7 @@ const TechSection = () => {
 
             <p className="text-[#ADB7BE] text-base lg:text-lg lg:pb-14 pb-4 lg:pr-80">
                 Here are the technologies and tools I am most experienced in. As an aspiring full-stack developer, I believe that
-                being knowledgable in multiple coding languages and frameworks are essential to complete projects timely. I am also
+                being knowledgeable in multiple coding languages and frameworks are essential to complete projects timely. I am also
                 looking forward to learning more fundamental tools for my future career. 
             </p>
 
