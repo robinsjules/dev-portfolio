@@ -26,7 +26,7 @@ const rawIcons = {
 }
 
 const icons = Object.fromEntries(
-  Object.entries(rawIcons).map(([key, Icon]) => [key, <Icon className="mr-4" />])
+  Object.entries(rawIcons).map(([key, Icon]) => [key, <Icon key={key} className="mr-4" />])
 )
 
 const TechCard = ({ title, items }) => {

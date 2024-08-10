@@ -16,7 +16,7 @@ const AboutSection = () => {
             <br />
             Beyond the tech space, I am a foodie and avid traveler. Exploring
             the unknown has always felt natural to me, and I am always up for a
-            new adventure and good challenge. Let's go on this journey of
+            new adventure and good challenge. Let&apos;s go on this journey of
             embracing uncertainty and creating a better world together!
           </p>
     </section>
