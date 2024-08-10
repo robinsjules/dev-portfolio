@@ -8,7 +8,7 @@ import LinkedInIcon from "../../../public/linkedin-icon.svg"
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-8 py-4 place-items-center">
+    <section className="items-center px-4 xl:px-16 lg:pt-16">
         <div className="grid grid-cols-1 sm:grid-cols-12">
             <div className="col-span-6 place-self-center mb-4 mt-4 lg:mt-0">
                 <div className="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] relative">

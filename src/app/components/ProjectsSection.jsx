@@ -39,10 +39,16 @@ const ProjectsSection = () => {
     }
 
     return (
-        <section className="items-center lg:py-16 py-4 px-4 xl:px-16">
+        <section className="items-center px-4 xl:px-16 lg:pt-20 py-4" id="projects">
             <h1 className="text-[#FF4365] uppercase lg:text-4xl text-2xl font-bold mb-4">Projects</h1>
 
-            <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+            <p className="text-[#ADB7BE] text-base lg:text-lg lg:pb-14 pb-4 lg:pr-80">
+                These are tech projects which I am proud to call my own! Some of them are made in fulfillment of SMU group projects,
+                while others are fruits of my personal motivation to excel outisde of school. These showcase my technical capabilities,
+                time management, and spirit to innovate. You can tap on the images to view the GitHub repositories.
+            </p>
+
+            <ul ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                 {projectsData.map((project, index) => (
                 <motion.li
                     key={index}

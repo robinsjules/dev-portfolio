@@ -32,7 +32,7 @@ const icons = Object.fromEntries(
 const TechCard = ({ title, items }) => {
   return (
     <div className="flex flex-col justify-start w-64 bg-[#181818] rounded-xl p-4 mx-auto mb-4">
-      <h2 className="lg:text-3xl text-xl font-semibold mb-4 text-white hover:text-[#00C2FF]">{title}</h2>
+      <h2 className="lg:text-2xl text-xl font-semibold mb-4 text-white hover:text-[#00C2FF]">{title}</h2>
       <div className="flex flex-col justify-start"> 
         {items.map((item, index) => (
           <div key={index} className="flex items-center lg:text-lg text-white">
