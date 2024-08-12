@@ -4,6 +4,7 @@ import AboutSection from "./components/AboutSection"
 import ProjectsSection from "./components/ProjectsSection"
 import TechSection from "./components/TechSection"
 import CertsSection from "./components/CertsSection"
+import ContactSection from "./components/ContactSection"
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <ProjectsSection />
         <TechSection />
         <CertsSection />
+        <ContactSection />
       </div>
     </main>
   );

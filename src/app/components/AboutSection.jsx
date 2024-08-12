@@ -8,7 +8,8 @@ const AboutSection = () => {
             Deeply passionate about technology and its power to transform lives,
             I strive to create, innovate, and improve products and services for
             the contemporary world. During my recent internship at InterSystems
-            Asia Pacific as a Software Engineer Intern, I developed REST APIs,
+            Asia Pacific as a Software Engineer Intern, I designed an inventory
+            and warehouse management system as well as developed REST APIs,
             SQL triggers, and an AI chatbot for an IT Solutions and Consulting
             firm to aid in migrating their current technology stack to the IRIS
             data platform.
