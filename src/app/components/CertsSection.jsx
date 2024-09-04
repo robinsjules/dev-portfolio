@@ -6,34 +6,48 @@ import { motion, useInView } from "framer-motion"
 const certsData = [
     {
         id: 1,
+        title: "Google AI Essentials",
+        description: "Issued August 2024",
+        image: "/images/Google-Logo.png",
+        link: "https://www.credly.com/badges/4bf9082d-8ce8-4a92-8b0b-e003182fed92/public_url"
+    },
+    {
+        id: 2,
+        title: "Google IT Support Professional Certificate",
+        description: "Issued August 2024",
+        image: "/images/Google-Logo.png",
+        link: "https://www.credly.com/badges/45b16588-2a69-484e-86dd-ff9cf5e125a5/public_url"
+    },
+    {
+        id: 3,
         title: "Docker Foundations Professional Certificate",
         description: "Issued August 2024",
         image: "/images/Docker-Logo.png",
         link: "https://www.linkedin.com/learning/certificates/445f4172bb836d3623cd08fbc093c210e4046bc745173ab0ee16427eb7eea3c8?u=21102035"
     },
     {
-        id: 2,
+        id: 4,
         title: "Java Certified Foundations Associate",
         description: "Issued November 2023",
         image: "/images/Oracle-Logo.png",
         link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=AF2AA5243AF6E6761C2D5F467D80EA611EEA69BA2813962105C9CC82F8BFC324"
     },
     {
-        id: 3,
+        id: 5,
         title: "Introduction to Blockchain with Industry Applications",
         description: "Issued May 2023",
         image: "/images/Udemy-Logo.png",
         link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-a7c3bba9-165a-4f79-8710-90232a08bf09.pdf"
     },
     {
-        id: 4,
+        id: 6,
         title: "JavaScript Basics for Beginners",
         description: "Issued May 2023",
         image: "/images/Udemy-Logo.png",
         link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-9c050d0d-93e2-4d5a-a1da-2367a71a0b3c.pdf"
     },
     {
-        id: 5,
+        id: 7,
         title: "Figma UI/UX Design Essential Training",
         description: "Issued May 2023",
         image: "/images/Udemy-Logo.png",
