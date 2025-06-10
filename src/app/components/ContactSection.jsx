@@ -7,38 +7,59 @@ import LinkedinIcon from "../../../public/linkedin-icon.svg"
 
 const ContactSection = () => {
     const [emailSubmitted, setEmailSubmitted] = useState(false)
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [error, setError] = useState("")
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const data = {
-            email: e.target.email.value,
-            subject: e.target.subject.value,
-            message: e.target.message.value.replace(/\n/g, "<br>"),
-        };
+        setIsSubmitting(true);
+        setError("");
 
-        const JSONdata = JSON.stringify(data)
-        const endpoint = "/api/send"
+        if (!e.target.email.value || !e.target.subject.value || !e.target.message.value) {
+        setError("All fields are required");
+        setIsSubmitting(false);
+        return;
+        }   
 
-        const options = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSONdata,
-        };
+        try {
+            const data = {
+                email: e.target.email.value,
+                subject: e.target.subject.value,
+                message: e.target.message.value.replace(/\n/g, "<br>"),
+            };
 
-        const response = await fetch(endpoint, options)
-        const resData = await response.json()
+            const JSONdata = JSON.stringify(data)
+            const endpoint = "/api/send"
 
-        if (response.status === 200) {
-            setEmailSubmitted(true)
-        } else {
-            console.error("Failed to send email:", resData.message)
+            const options = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSONdata,
+            };
+
+            const response = await fetch(endpoint, options)
+            const resData = await response.json()
+
+            if (response.status === 200) {
+                setEmailSubmitted(true)
+                e.target.reset();
+            } else {
+                console.error("Failed to send email:", resData.message)
+                setError(resData.message || "Failed to send email. Please try again.")
+            }
+        } catch (error) {
+            console.error("Network error:", error)
+            setError("Network error. Please check your connection and try again.")
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
     const handleNewEmail = () => {
         setEmailSubmitted(false)
+        setError("")
     };
 
     return (
@@ -73,13 +94,19 @@ const ContactSection = () => {
                             </p>
                             <button
                                 onClick={handleNewEmail}
-                                className="bg-[#FF4365] hover:bg-white text-[#051014] font-medium py-2.5 px-5 rounded-lg"
+                                className="bg-[#FF4365] hover:bg-white text-[#051014] font-medium py-2.5 px-5 rounded-lg transition-colors"
                             >
                                 Send New Message
                             </button>
                         </>
                     ) : (
                         <form className="flex flex-col w-full" onSubmit={handleSubmit}>
+                            {error && (
+                                <div className="mb-4 p-3 bg-red-900/20 border border-red-500/50 rounded-lg">
+                                    <p className="text-red-400 text-sm">{error}</p>
+                                </div>
+                            )}
+                            
                             <div className="mb-6">
                                 <label
                                     htmlFor="email"
@@ -92,8 +119,9 @@ const ContactSection = () => {
                                     type="email"
                                     id="email"
                                     required
-                                    className="bg-[#181818] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                                    placeholder=""
+                                    disabled={isSubmitting}
+                                    className="bg-[#181818] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 disabled:opacity-50"
+                                    placeholder="your.email@example.com"
                                 />
                             </div>
                             <div className="mb-6">
@@ -108,8 +136,9 @@ const ContactSection = () => {
                                     type="text"
                                     id="subject"
                                     required
-                                    className="bg-[#181818] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                                    placeholder=""
+                                    disabled={isSubmitting}
+                                    className="bg-[#181818] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 disabled:opacity-50"
+                                    placeholder="What's this about?"
                                 />
                             </div>
                             <div className="mb-6">
@@ -123,15 +152,18 @@ const ContactSection = () => {
                                     name="message"
                                     id="message"
                                     required
-                                    className="bg-[#181818] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                                    placeholder=""
+                                    disabled={isSubmitting}
+                                    rows="4"
+                                    className="bg-[#181818] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 disabled:opacity-50 resize-vertical"
+                                    placeholder="Your message here..."
                                 />
                             </div>
                             <button
                                 type="submit"
-                                className="bg-[#FF4365] hover:bg-white text-[#051014] font-medium py-2.5 px-5 rounded-lg w-full"
+                                disabled={isSubmitting}
+                                className="bg-[#FF4365] hover:bg-white text-[#051014] font-medium py-2.5 px-5 rounded-lg w-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                Send Message
+                                {isSubmitting ? "Sending..." : "Send Message"}
                             </button>
                         </form>
                     )}
